@@ -1,0 +1,26 @@
+:root {
+  --ds-rocketflow-primary: #392d69;
+  --ds-rocketflow-secondary: #8879c3;
+  --ds-rocketflow-tertiary: #ac9aca;
+  --ds-rocketflow-danger: #bf4342;
+  --ds-rocketflow-background: #f8fafc;
+  --ds-rocketflow-text: #060505;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ds-rocketflow-primary: #392d69;
+    --ds-rocketflow-secondary: #8879c3;
+    --ds-rocketflow-tertiary: #ac9aca;
+    --ds-rocketflow-danger: #bf4342;
+    --ds-rocketflow-background: #060505;
+    --ds-rocketflow-text: #f8fafc;
+  }
+}
+
+body {
+  margin: 0% !important;
+  padding: 0% !important;
+  overflow-y: scroll !important;
+  background-color: var(--ds-rocketflow-background) !important;
+}

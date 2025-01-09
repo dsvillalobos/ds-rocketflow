@@ -1,0 +1,26 @@
+{
+  "name": "ds-rocketflow",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.47.10",
+    "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
+    "openai": "^4.77.0",
+    "qrcode.vue": "^3.6.0",
+    "uuid": "^11.0.3",
+    "vue": "^3.5.13",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "vite": "^6.0.1",
+    "vite-plugin-vue-devtools": "^7.6.5"
+  }
+}

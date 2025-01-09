@@ -1,0 +1,65 @@
+@import "./base.css";
+
+.ds-rocketflow-text {
+  color: var(--ds-rocketflow-text) !important;
+}
+
+.btn-primary {
+  background-color: var(--ds-rocketflow-primary) !important;
+  border: 1px solid var(--ds-rocketflow-primary) !important;
+}
+
+.btn-secondary {
+  background-color: var(--ds-rocketflow-secondary) !important;
+  border: 1px solid var(--ds-rocketflow-secondary) !important;
+}
+
+.btn-tertiary {
+  background-color: var(--ds-rocketflow-tertiary) !important;
+  border: 1px solid var(--ds-rocketflow-tertiary) !important;
+}
+
+.form-control,
+.form-label,
+.form-floating > .form-label::after,
+.form-control:active {
+  background-color: transparent !important;
+  color: var(--ds-rocketflow-text) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-control {
+  border: 1px solid var(--ds-rocketflow-secondary) !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  .accordion-button::after {
+    -webkit-filter: grayscale(1) invert(1) !important;
+    filter: grayscale(1) invert(1) !important;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .accordion-button::after {
+    -webkit-filter: brightness(0) !important;
+    filter: brightness(0) !important;
+  }
+}
+
+.accordion-item,
+.accordion-button {
+  background-color: transparent !important;
+}
+
+.accordion-item {
+  border: 1px solid var(--ds-rocketflow-secondary) !important;
+}
+
+.accordion-button,
+.accordion-button:active,
+.accordion-button:hover {
+  outline: none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+}
