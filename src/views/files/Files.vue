@@ -60,7 +60,7 @@ onMounted(async function () {
         :hightlight="alertHighlight"
         :message="alertMessage"
       ></Alert>
-      <div class="accordion" id="accordionExample">
+      <div v-if="files.length > 0" class="accordion" id="accordionExample">
         <FileAccordionItem
           v-for="(file, index) in files"
           :key="index"
@@ -72,6 +72,13 @@ onMounted(async function () {
           :owner="file.owner"
           :date-time="file.file_datetime"
         ></FileAccordionItem>
+      </div>
+      <div v-else>
+        <ViewTitle
+          title="No Files Yet"
+          description="Add your first file to get started."
+          icon=""
+        ></ViewTitle>
       </div>
     </div>
   </main>

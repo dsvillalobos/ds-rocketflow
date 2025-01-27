@@ -60,7 +60,7 @@ onMounted(async function () {
         :hightlight="alertHighlight"
         :message="alertMessage"
       ></Alert>
-      <div class="accordion" id="accordionExample">
+      <div v-if="links.length > 0" class="accordion" id="accordionExample">
         <LinkAccordionItem
           v-for="(link, index) in links"
           :key="index"
@@ -71,6 +71,13 @@ onMounted(async function () {
           :owner="link.owner"
           :date-time="link.link_datetime"
         ></LinkAccordionItem>
+      </div>
+      <div v-else>
+        <ViewTitle
+          title="No Links Yet"
+          description="Add your first link to get started."
+          icon=""
+        ></ViewTitle>
       </div>
     </div>
   </main>

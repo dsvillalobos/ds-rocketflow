@@ -24,23 +24,23 @@ onMounted(async function () {
         description="Discover the essence of DS RocketFlow."
         icon="circle-info"
       ></ViewTitle>
-      <ul class="list-group list-group-flush small mx-3">
-        <li class="list-group-item ds-rocketflow-text">
+      <ul class="list-group small mx-3">
+        <li class="list-group-item py-3 ds-rocketflow-text">
           <h6 class="my-0 d-inline">Created by</h6>
           @dsvillalobos
         </li>
-        <li class="list-group-item ds-rocketflow-text">
+        <li class="list-group-item py-3 ds-rocketflow-text">
           <h6 class="my-0 d-inline">Version</h6>
-          0.0.0
+          1.0.0
         </li>
-        <li class="list-group-item ds-rocketflow-text">
+        <li class="list-group-item py-3 ds-rocketflow-text">
           <h6 class="my-0 d-inline">Help & Privacy</h6>
           <ul>
             <li><a href="" class="ds-rocketflow-text">Help Center</a></li>
             <li><a href="" class="ds-rocketflow-text">Privacy Policy</a></li>
           </ul>
         </li>
-        <li class="list-group-item ds-rocketflow-text">
+        <li class="list-group-item py-3 ds-rocketflow-text">
           <h6 class="my-0 d-inline">Follow Me</h6>
           <a
             class="ds-rocketflow-text mx-2 fs-5"
@@ -67,7 +67,7 @@ onMounted(async function () {
             ><i class="fa-brands fa-github px-1"></i
           ></a>
         </li>
-        <li class="list-group-item ds-rocketflow-text">
+        <li class="list-group-item py-3 ds-rocketflow-text">
           <h6 class="my-0 d-inline">Copyright</h6>
           © {{ year }} dsvillalobos. All rights reserved.
         </li>
@@ -79,5 +79,10 @@ onMounted(async function () {
 <style scoped>
 .list-group-item {
   background-color: transparent !important;
+}
+
+.list-group-item {
+  border-width: 1px !important;
+  border-color: var(--ds-rocketflow-secondary) !important;
 }
 </style>

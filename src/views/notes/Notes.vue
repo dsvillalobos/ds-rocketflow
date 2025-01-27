@@ -60,7 +60,7 @@ onMounted(async function () {
         :hightlight="alertHighlight"
         :message="alertMessage"
       ></Alert>
-      <div class="accordion" id="accordionExample">
+      <div v-if="notes.length > 0" class="accordion" id="accordionExample">
         <NoteAccordionItem
           v-for="(note, index) in notes"
           :key="index"
@@ -71,6 +71,13 @@ onMounted(async function () {
           :owner="note.owner"
           :date-time="note.note_datetime"
         ></NoteAccordionItem>
+      </div>
+      <div v-else>
+        <ViewTitle
+          title="No Notes Yet"
+          description="Add your first note to get started."
+          icon=""
+        ></ViewTitle>
       </div>
     </div>
   </main>
