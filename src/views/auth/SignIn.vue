@@ -40,6 +40,9 @@ async function signIn() {
     alertMessage.value = "Wrong email or password. Please try again.";
     displayAlert.value = true;
   }
+
+  email.value = "";
+  password.value = "";
 }
 </script>
 

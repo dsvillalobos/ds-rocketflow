@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, nextTick } from "vue";
 import { useRouter } from "vue-router";
 import OpenAI from "openai";
 import Header from "@/components/Header.vue";
@@ -12,6 +12,7 @@ const user = JSON.parse(sessionStorage.getItem("user"));
 
 const message = ref("");
 const conversation = ref([]);
+const conversationBox = ref(null);
 
 const alertType = ref("");
 const alertHighlight = ref("");
@@ -36,6 +37,14 @@ async function sendMessage() {
       content: message.value,
     });
 
+    message.value = "";
+
+    await nextTick();
+    conversationBox.value.scrollTo({
+      top: conversationBox.value.scrollHeight,
+      behavior: "smooth",
+    });
+
     const completion = await openai.chat.completions.create({
       model: "gpt-3.5-turbo",
       messages: conversation.value,
@@ -45,14 +54,18 @@ async function sendMessage() {
       role: "assistant",
       content: completion.choices[0].message.content,
     });
+
+    await nextTick();
+    conversationBox.value.scrollTo({
+      top: conversationBox.value.scrollHeight,
+      behavior: "smooth",
+    });
   } catch (err) {
     alertType.value = "danger";
     alertHighlight.value = "Oops!";
     alertMessage.value = "Something went wrong. Please try again.";
     displayAlert.value = true;
   }
-
-  message.value = "";
 }
 </script>
 
@@ -72,6 +85,7 @@ async function sendMessage() {
         :message="alertMessage"
       ></Alert>
       <div
+        ref="conversationBox"
         class="rocketflow-ai-box ds-rocketflow-text mx-3 mb-3"
         v-if="conversation.length > 0"
       >
@@ -125,5 +139,8 @@ async function sendMessage() {
 .rocketflow-ai-box pre {
   font-family: inherit !important;
   white-space: pre-wrap !important;
+  user-select: text !important;
+  -moz-user-select: text !important;
+  -webkit-user-select: text !important;
 }
 </style>

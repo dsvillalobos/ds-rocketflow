@@ -1,29 +1,26 @@
-# ds-rocketflow
+![DS RocketFlow](./public/readme/readme-banner.png)
 
-This template should help get you started developing with Vue 3 in Vite.
+# DS RocketFlow
 
-## Recommended IDE Setup
+## _Storage at Rocket Speed._
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+DS RocketFlow is a cutting-edge cloud storage solution designed for simplicity, speed, and versatility. It empowers users to effortlessly store files, links, and notes that will sync seamlessly across all devices. With an intuitive interface, real-time storage insights, and the intelligence of RocketFlow AI for any query or task, it redefines what it means to stay organized in today’s fast-paced world. DS RocketFlow isn’t just storage—it’s smarter, faster, and built for you.
 
-## Customize configuration
+### Features
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+- Effortless Storage.
+- RocketFlow AI.
+- DS RocketFlow Dashboard.
+- Sync Across All Devices.
+- Top-Notch Security.
 
-## Project Setup
+![Features](./public/readme/readme-features.png)
 
-```sh
-npm install
-```
+### Release Notes
 
-### Compile and Hot-Reload for Development
+- New "RocketFlow AI".
+- New Stable Version.
+- PWA Integration.
+- Bug Fixes.
 
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+###### DS RocketFlow | Version 1.1.0

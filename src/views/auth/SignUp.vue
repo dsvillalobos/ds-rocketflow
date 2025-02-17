@@ -38,6 +38,11 @@ async function signUp() {
     alertMessage.value = "Something went wrong. Please try again.";
     displayAlert.value = true;
   }
+
+  name.value = "";
+  lastName.value = "";
+  email.value = "";
+  password.value = "";
 }
 </script>
 

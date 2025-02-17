@@ -65,5 +65,8 @@ onMounted(async function () {
 pre {
   font-family: inherit !important;
   white-space: pre-wrap !important;
+  user-select: text !important;
+  -moz-user-select: text !important;
+  -webkit-user-select: text !important;
 }
 </style>

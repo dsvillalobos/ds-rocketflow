@@ -23,4 +23,10 @@ body {
   padding: 0% !important;
   overflow-y: scroll !important;
   background-color: var(--ds-rocketflow-background) !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none !important;
+  overscroll-behavior-y: none !important;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
