@@ -99,6 +99,7 @@ async function addFile() {
             id="name"
             class="form-control"
             required
+            maxlength="255"
             placeholder="Name:"
             v-model="name"
           />

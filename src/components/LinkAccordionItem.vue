@@ -30,9 +30,6 @@ const props = defineProps({
   },
 });
 
-const [date, time] = props.dateTime.split("T");
-const formattedTime = time.split(".")[0];
-
 async function deleteLink() {
   try {
     const response = await axios.delete(
@@ -75,11 +72,15 @@ async function deleteLink() {
         <div class="row mb-3">
           <div class="col text-center">
             <div class="h6 my-1">Date:</div>
-            <span class="small">{{ date }}</span>
+            <span class="small">{{
+              new Date(props.dateTime).toLocaleDateString()
+            }}</span>
           </div>
           <div class="col text-center">
             <div class="h6 my-1">Time:</div>
-            <span class="small">{{ formattedTime }}</span>
+            <span class="small">{{
+              new Date(props.dateTime).toLocaleTimeString()
+            }}</span>
           </div>
         </div>
         <div class="row mb-3">

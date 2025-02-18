@@ -69,6 +69,7 @@ async function signUp() {
             id="name"
             class="form-control"
             required
+            maxlength="255"
             placeholder="Name:"
             v-model="name"
           />
@@ -81,6 +82,7 @@ async function signUp() {
             id="lastName"
             class="form-control"
             required
+            maxlength="255"
             placeholder="Last Name:"
             v-model="lastName"
           />
@@ -93,6 +95,7 @@ async function signUp() {
             id="email"
             class="form-control"
             required
+            maxlength="255"
             placeholder="Email:"
             v-model="email"
           />
@@ -105,6 +108,10 @@ async function signUp() {
             id="password"
             class="form-control"
             required
+            minlength="8"
+            maxlength="255"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
             placeholder="Password:"
             v-model="password"
           />

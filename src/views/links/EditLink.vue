@@ -88,6 +88,7 @@ async function editLink() {
             id="title"
             class="form-control"
             required
+            maxlength="255"
             placeholder="Title:"
             v-model="title"
           />
