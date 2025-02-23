@@ -1,6 +1,13 @@
 <script setup>
-import { RouterLink } from "vue-router";
+import { RouterLink, useRouter } from "vue-router";
 import Icon from "./Icon.vue";
+
+const router = useRouter();
+
+function logOut() {
+  sessionStorage.removeItem("user");
+  router.push("/");
+}
 </script>
 
 <template>
@@ -51,6 +58,11 @@ import Icon from "./Icon.vue";
             <li class="nav-item mx-1">
               <RouterLink class="nav-link text-light" to="/about"
                 ><Icon name="circle-info"></Icon> About</RouterLink
+              >
+            </li>
+            <li class="nav-item mx-1">
+              <RouterLink class="nav-link text-light" to="#" @click="logOut"
+                ><Icon name="right-from-bracket"></Icon> Log Out</RouterLink
               >
             </li>
           </ul>
