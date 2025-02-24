@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import axios from "axios";
+import supabase from "@/supabase/supabaseClient";
 import Icon from "./Icon.vue";
 
 const props = defineProps({
@@ -39,6 +40,14 @@ async function deleteFile() {
     const response = await axios.delete(
       `${import.meta.env.VITE_DS_ROCKETFLOW_API_URL}/files/${props.fileId}`
     );
+
+    const { err } = await supabase.storage
+      .from("ds-rocketflow-files")
+      .remove([props.file.split("/").slice(-1)[0]]);
+
+    if (err) {
+      throw err;
+    }
 
     window.location.reload();
   } catch (err) {

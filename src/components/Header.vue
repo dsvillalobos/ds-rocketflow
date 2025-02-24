@@ -4,7 +4,7 @@ import Icon from "./Icon.vue";
 
 const router = useRouter();
 
-function logOut() {
+function signOut() {
   sessionStorage.removeItem("user");
   router.push("/");
 }
@@ -61,8 +61,8 @@ function logOut() {
               >
             </li>
             <li class="nav-item mx-1">
-              <RouterLink class="nav-link text-light" to="#" @click="logOut"
-                ><Icon name="right-from-bracket"></Icon> Log Out</RouterLink
+              <RouterLink class="nav-link text-light" to="#" @click="signOut"
+                ><Icon name="right-from-bracket"></Icon> Sign Out</RouterLink
               >
             </li>
           </ul>

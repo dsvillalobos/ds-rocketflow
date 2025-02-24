@@ -31,7 +31,7 @@ onMounted(async function () {
         </li>
         <li class="list-group-item py-3 ds-rocketflow-text">
           <h6 class="my-0 d-inline">Version</h6>
-          1.1.4
+          1.1.5
         </li>
         <li class="list-group-item py-3 ds-rocketflow-text">
           <h6 class="my-0 d-inline">Help & Privacy</h6>
