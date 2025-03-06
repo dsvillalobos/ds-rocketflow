@@ -20,6 +20,6 @@ DS RocketFlow is a cutting-edge cloud storage solution designed for simplicity, 
 
 - Bug Fixes.
 
-###### DS RocketFlow | Version 1.1.5
+###### DS RocketFlow | Version 1.2.0
 
 See also: [DS RocketFlow - RESTful Web Service](https://github.com/dsvillalobos/ds-rocketflow-rest)
