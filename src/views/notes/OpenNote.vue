@@ -47,7 +47,7 @@ onMounted(async function () {
   <Header></Header>
   <main class="container">
     <div class="col-md-8 mx-auto">
-      <ViewTitle :title="title"></ViewTitle>
+      <ViewTitle :title="title" icon="sticky-note"></ViewTitle>
       <Alert
         v-if="displayAlert"
         :type="alertType"

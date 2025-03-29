@@ -33,6 +33,10 @@
   border: 1px solid var(--ds-rocketflow-secondary) !important;
 }
 
+textarea.form-control {
+  height: 150px !important;
+}
+
 @media (prefers-color-scheme: dark) {
   .accordion-button::after {
     -webkit-filter: grayscale(1) invert(1) !important;
